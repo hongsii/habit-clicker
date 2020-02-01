@@ -12,7 +12,6 @@ class HabitMainTableViewController: UITableViewController {
    
     static let refreshHabits = Notification.Name(rawValue: "refreshHabits")
     
-    var hierarchicalData = [[String]]()
     private var observers = [NSObjectProtocol]()
     
     deinit {
@@ -22,23 +21,19 @@ class HabitMainTableViewController: UITableViewController {
     // 뷰가 생성될 때 초기화 코드 구현
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let refreshHabitsObserver = NotificationCenter.default.addObserver(forName: HabitMainTableViewController.refreshHabits, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.tableView.reloadData() }
         
         observers.append(refreshHabitsObserver)
+        
+        DataManager.shared.fetchHabits()
+        tableView.reloadData()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        DataManager.shared.fetchHabits()
-        tableView.reloadData()
     }
 
     // MARK: - Table view data source
