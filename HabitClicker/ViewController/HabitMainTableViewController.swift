@@ -10,7 +10,6 @@ import UIKit
 
 class HabitMainTableViewController: UITableViewController {
     
-    var hierarchicalData = [[String]]()
     var observer: NSObjectProtocol?
     
     deinit {
