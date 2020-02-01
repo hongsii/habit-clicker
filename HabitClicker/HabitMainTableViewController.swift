@@ -11,22 +11,25 @@ import UIKit
 class HabitMainTableViewController: UITableViewController {
     
     var hierarchicalData = [[String]]()
-
+    var observer: NSObjectProtocol?
+    
+    deinit {
+        if let observer = observer {
+            NotificationCenter.default.removeObserver(observer)
+        }
+    }
+    
     // 뷰가 생성될 때 초기화 코드 구현
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        observer = NotificationCenter.default.addObserver(forName: NewHabitViewController.newHabitDidAdded, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.tableView.reloadData() }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-    
-    // 화면이 표시될 때 실행될 코드 구현
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
     }
 
     // MARK: - Table view data source

@@ -18,17 +18,22 @@ class NewHabitViewController: UIViewController {
     
     @IBOutlet weak var contentTextView: UITextView!
     
-    @IBAction func save(_ sender: Any) {
+    @IBAction func add(_ sender: Any) {
         guard let content = self.contentTextView.text,
             !content.isEmpty else {
                 alert(messasge: "내용을 입력하세요.")
                 return
         }
         Habit.items.append(Habit(content: content))
+        NotificationCenter.default.post(name: NewHabitViewController.newHabitDidAdded, object: nil)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+}
+
+extension NewHabitViewController {
+    static let newHabitDidAdded = Notification.Name(rawValue: "newHabitDidAdded")
 }
