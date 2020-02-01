@@ -15,7 +15,7 @@ class DataManager {
     
     private init() {}
     
-    var context: NSManagedObjectContext {
+    private var context: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
     
