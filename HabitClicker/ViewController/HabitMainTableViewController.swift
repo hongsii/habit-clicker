@@ -9,25 +9,23 @@
 import UIKit
 
 class HabitMainTableViewController: UITableViewController {
+   
+    static let refreshHabits = Notification.Name(rawValue: "refreshHabits")
     
     var hierarchicalData = [[String]]()
-    var observers = [NSObjectProtocol]()
+    private var observers = [NSObjectProtocol]()
     
     deinit {
-        for observer in observers {
-            NotificationCenter.default.removeObserver(observer)
-        }
+        observers.forEach { observer in NotificationCenter.default.removeObserver(observer) }
     }
-    
-    
     
     // 뷰가 생성될 때 초기화 코드 구현
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let newHabitDidAddedObserver = NotificationCenter.default.addObserver(forName: NewHabitViewController.newHabitDidAdded, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.tableView.reloadData() }
+        let refreshHabitsObserver = NotificationCenter.default.addObserver(forName: HabitMainTableViewController.refreshHabits, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.tableView.reloadData() }
         
-        observers.append(newHabitDidAddedObserver)
+        observers.append(refreshHabitsObserver)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
