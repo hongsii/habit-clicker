@@ -70,7 +70,7 @@
         <!--새 습관-->
         <scene sceneID="8fb-OZ-5JI">
             <objects>
-                <viewController id="lVn-pa-1cX" sceneMemberID="viewController">
+                <viewController id="lVn-pa-1cX" customClass="NewHabitViewController" customModule="HabitClicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9S4-86-QQ6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,7 +94,11 @@
                         <viewLayoutGuide key="safeArea" id="NIG-0v-fB5"/>
                     </view>
                     <navigationItem key="navigationItem" title="새 습관" id="k96-eJ-NAO">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1XI-RM-sxS"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1XI-RM-sxS">
+                            <connections>
+                                <action selector="cancel:" destination="lVn-pa-1cX" id="zCy-Xe-EOh"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Vna-AD-7jO"/>
                     </navigationItem>
                 </viewController>
