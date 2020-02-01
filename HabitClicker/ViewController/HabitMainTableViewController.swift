@@ -9,20 +9,22 @@
 import UIKit
 
 class HabitMainTableViewController: UITableViewController {
+   
+    static let refreshHabits = Notification.Name(rawValue: "refreshHabits")
     
-    var observer: NSObjectProtocol?
+    private var observers = [NSObjectProtocol]()
     
     deinit {
-        if let observer = observer {
-            NotificationCenter.default.removeObserver(observer)
-        }
+        observers.forEach { observer in NotificationCenter.default.removeObserver(observer) }
     }
     
     // 뷰가 생성될 때 초기화 코드 구현
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let refreshHabitsObserver = NotificationCenter.default.addObserver(forName: HabitMainTableViewController.refreshHabits, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.tableView.reloadData() }
         
-        observer = NotificationCenter.default.addObserver(forName: NewHabitViewController.newHabitDidAdded, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.tableView.reloadData() }
+        observers.append(refreshHabitsObserver)
         
         DataManager.shared.fetchHabits()
         tableView.reloadData()
@@ -40,13 +42,12 @@ class HabitMainTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HabitCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HabitCell", for: indexPath) as! HabitMainTableViewCell
 
-        let target = DataManager.shared.habits[indexPath.row]
-        cell.textLabel?.text = target.content
-
+        cell.habit = DataManager.shared.habits[indexPath.row]
         return cell
     }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

@@ -25,15 +25,11 @@ class NewHabitViewController: UIViewController {
                 return
         }
         DataManager.shared.addNewHabit(content)
-        NotificationCenter.default.post(name: NewHabitViewController.newHabitDidAdded, object: nil)
+        NotificationCenter.default.post(name: HabitMainTableViewController.refreshHabits, object: nil)
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-}
-
-extension NewHabitViewController {
-    static let newHabitDidAdded = Notification.Name(rawValue: "newHabitDidAdded")
 }
