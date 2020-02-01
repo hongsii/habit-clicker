@@ -9,9 +9,23 @@
 import UIKit
 
 class HabitMainTableViewController: UITableViewController {
-
+    
+    var observer: NSObjectProtocol?
+    
+    deinit {
+        if let observer = observer {
+            NotificationCenter.default.removeObserver(observer)
+        }
+    }
+    
+    // 뷰가 생성될 때 초기화 코드 구현
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        observer = NotificationCenter.default.addObserver(forName: NewHabitViewController.newHabitDidAdded, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.tableView.reloadData() }
+        
+        DataManager.shared.fetchHabits()
+        tableView.reloadData()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -21,25 +35,18 @@ class HabitMainTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return Habit.habits.count
+        return DataManager.shared.habits.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HabitCell", for: indexPath)
 
-        let target = Habit.habits[indexPath.row]
+        let target = DataManager.shared.habits[indexPath.row]
         cell.textLabel?.text = target.content
 
         return cell
     }
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

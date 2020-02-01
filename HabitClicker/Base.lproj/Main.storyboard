@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Au4-YW-875">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +12,7 @@
             <objects>
                 <tableViewController id="bZZ-ps-SmI" customClass="HabitMainTableViewController" customModule="HabitClicker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kAE-rz-4sd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -42,7 +42,8 @@
                     <navigationItem key="navigationItem" title="습관" largeTitleDisplayMode="always" id="Y5F-nw-6Eu">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xid-X4-KVo">
                             <connections>
-                                <segue destination="fpP-rh-SfY" kind="showDetail" id="EaY-3z-Icg"/>
+                                <action selector="addNewHabit:" destination="bZZ-ps-SmI" id="3eu-ah-zND"/>
+                                <segue destination="fpP-rh-SfY" kind="presentation" id="HgA-bf-dCW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -56,7 +57,7 @@
             <objects>
                 <navigationController id="Au4-YW-875" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sxo-vZ-UhH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -70,15 +71,14 @@
         <!--새 습관-->
         <scene sceneID="8fb-OZ-5JI">
             <objects>
-                <viewController id="lVn-pa-1cX" sceneMemberID="viewController">
+                <viewController id="lVn-pa-1cX" customClass="NewHabitViewController" customModule="HabitClicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9S4-86-QQ6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vf9-Qn-vkz">
-                                <rect key="frame" x="5" y="5" width="414" height="736"/>
+                                <rect key="frame" x="5" y="5" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -94,13 +94,25 @@
                         <viewLayoutGuide key="safeArea" id="NIG-0v-fB5"/>
                     </view>
                     <navigationItem key="navigationItem" title="새 습관" id="k96-eJ-NAO">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1XI-RM-sxS"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Vna-AD-7jO"/>
+                        <barButtonItem key="leftBarButtonItem" title="취소" id="1XI-RM-sxS">
+                            <connections>
+                                <action selector="cancel:" destination="lVn-pa-1cX" id="zCy-Xe-EOh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="추가" id="Vna-AD-7jO">
+                            <connections>
+                                <action selector="add:" destination="lVn-pa-1cX" id="95P-hR-u2r"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ContentTextView" destination="vf9-Qn-vkz" id="HX2-6z-jxF"/>
+                        <outlet property="contentTextView" destination="vf9-Qn-vkz" id="SLn-FI-jRE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxv-Qy-1rU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2175.36231884058" y="-700.27173913043487"/>
+            <point key="canvasLocation" x="2175.36231884058" y="-700.44642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="q6q-BC-YVX">
@@ -108,7 +120,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fpP-rh-SfY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gDF-dC-XpP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
