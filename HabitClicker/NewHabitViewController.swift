@@ -24,7 +24,7 @@ class NewHabitViewController: UIViewController {
                 alert(messasge: "내용을 입력하세요.")
                 return
         }
-        Habit.items.append(Habit(content: content))
+        DataManager.shared.addNewHabit(content)
         NotificationCenter.default.post(name: NewHabitViewController.newHabitDidAdded, object: nil)
         self.dismiss(animated: true, completion: nil)
     }

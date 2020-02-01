@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		62FBD00F23E463820014373A /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBD00E23E463820014373A /* Habit.swift */; };
 		62FBD01123E464FF0014373A /* HabitMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBD01023E464FF0014373A /* HabitMainTableViewController.swift */; };
 		62FBD01323E5153B0014373A /* NewHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBD01223E5153B0014373A /* NewHabitViewController.swift */; };
 		62FBD01923E52BC40014373A /* AlertUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBD01823E52BC40014373A /* AlertUIViewController.swift */; };
+		62FBD01F23E542000014373A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBD01E23E542000014373A /* DataManager.swift */; };
 		62FCD74423E455B60036076C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FCD74323E455B60036076C /* AppDelegate.swift */; };
 		62FCD74623E455B60036076C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FCD74523E455B60036076C /* SceneDelegate.swift */; };
 		62FCD74B23E455B60036076C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62FCD74923E455B60036076C /* Main.storyboard */; };
@@ -20,10 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		62FBD00E23E463820014373A /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		62FBD01023E464FF0014373A /* HabitMainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitMainTableViewController.swift; sourceTree = "<group>"; };
 		62FBD01223E5153B0014373A /* NewHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitViewController.swift; sourceTree = "<group>"; };
 		62FBD01823E52BC40014373A /* AlertUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUIViewController.swift; sourceTree = "<group>"; };
+		62FBD01E23E542000014373A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		62FCD74023E455B60036076C /* HabitClicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HabitClicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62FCD74323E455B60036076C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62FCD74523E455B60036076C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,9 +48,16 @@
 		62FBD00D23E463610014373A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				62FBD00E23E463820014373A /* Habit.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		62FBD01D23E541EF0014373A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				62FBD01E23E542000014373A /* DataManager.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		62FCD73723E455B60036076C = {
@@ -72,6 +79,7 @@
 		62FCD74223E455B60036076C /* HabitClicker */ = {
 			isa = PBXGroup;
 			children = (
+				62FBD01D23E541EF0014373A /* Data */,
 				62FBD00D23E463610014373A /* Model */,
 				62FCD74323E455B60036076C /* AppDelegate.swift */,
 				62FCD74523E455B60036076C /* SceneDelegate.swift */,
@@ -159,11 +167,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				62FBD01323E5153B0014373A /* NewHabitViewController.swift in Sources */,
-				62FBD00F23E463820014373A /* Habit.swift in Sources */,
 				62FCD74423E455B60036076C /* AppDelegate.swift in Sources */,
 				62FCD74E23E455B60036076C /* HabitClicker.xcdatamodeld in Sources */,
 				62FBD01923E52BC40014373A /* AlertUIViewController.swift in Sources */,
 				62FCD74623E455B60036076C /* SceneDelegate.swift in Sources */,
+				62FBD01F23E542000014373A /* DataManager.swift in Sources */,
 				62FBD01123E464FF0014373A /* HabitMainTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
