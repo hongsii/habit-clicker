@@ -10,13 +10,13 @@ import UIKit
 
 class HabitMainTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var content: UILabel!
-    @IBOutlet weak var count: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var countLabel: UILabel!
     
     var habit: Habit? {
         didSet {
-            content.text = habit?.content
-            setCountLabel(currentCount: habit!.count)
+            contentLabel.text = habit?.content
+            setCountLabel(count: habit?.count)
         }
     }
     
@@ -32,20 +32,21 @@ class HabitMainTableViewCell: UITableViewCell {
         habit?.count += additionalCount
         DataManager.shared.saveContext()
         
-        setCountLabel(currentCount: habit!.count)
+        setCountLabel(count: habit?.count)
     }
     
-    private func setCountLabel(currentCount: Int16 = 0) {
-        var text = String(currentCount)
+    private func setCountLabel(count: Int16? = 0) {
+        guard let count = count else { return }
+        var text = String(count)
         var textColor = UIColor.label
-        if (currentCount > Int16(0)) {
-            text = "+" + text
+        if (count > Int16(0)) {
+            text = "+\(text)"
             textColor = UIColor.systemGreen
-        } else if (currentCount < Int16(0)) {
+        } else if (count < Int16(0)) {
             textColor = UIColor.systemRed
         }
-        count.text = text
-        count.textColor = textColor
+        countLabel.text = text
+        countLabel.textColor = textColor
     }
 
     override func awakeFromNib() {

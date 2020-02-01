@@ -24,7 +24,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFB-Of-OVl">
-                                            <rect key="frame" x="19.999999999999996" y="10.333333333333334" width="41.666666666666657" height="20.666666666666664"/>
+                                            <rect key="frame" x="20" y="10.333333333333334" width="42" height="20.666666666666664"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -40,7 +40,7 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLW-Bi-V0h">
-                                            <rect key="frame" x="330.33333333333331" y="4.9999999999999982" width="31.666666666666686" height="31.333333333333329"/>
+                                            <rect key="frame" x="330" y="4.9999999999999982" width="32" height="31.333333333333329"/>
                                             <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" image="plus.circle.fill" catalog="system">
                                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -51,7 +51,7 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cnt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygr-6i-Lic">
-                                            <rect key="frame" x="300.33333333333331" y="10.333333333333336" width="25" height="21"/>
+                                            <rect key="frame" x="300" y="10.333333333333336" width="25" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -73,8 +73,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="content" destination="LFB-Of-OVl" id="ixH-Fs-9Hm"/>
-                                    <outlet property="count" destination="Ygr-6i-Lic" id="6J9-FO-35F"/>
+                                    <outlet property="contentLabel" destination="LFB-Of-OVl" id="ixH-Fs-9Hm"/>
+                                    <outlet property="countLabel" destination="Ygr-6i-Lic" id="6J9-FO-35F"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
