@@ -60,6 +60,16 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		62FBD02523E56C400014373A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				62FBD01023E464FF0014373A /* HabitMainTableViewController.swift */,
+				62FBD01223E5153B0014373A /* NewHabitViewController.swift */,
+				62FBD01823E52BC40014373A /* AlertUIViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		62FCD73723E455B60036076C = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +89,7 @@
 		62FCD74223E455B60036076C /* HabitClicker */ = {
 			isa = PBXGroup;
 			children = (
+				62FBD02523E56C400014373A /* ViewController */,
 				62FBD01D23E541EF0014373A /* Data */,
 				62FBD00D23E463610014373A /* Model */,
 				62FCD74323E455B60036076C /* AppDelegate.swift */,
@@ -88,9 +99,6 @@
 				62FCD75123E455B80036076C /* LaunchScreen.storyboard */,
 				62FCD75423E455B80036076C /* Info.plist */,
 				62FCD74C23E455B60036076C /* HabitClicker.xcdatamodeld */,
-				62FBD01023E464FF0014373A /* HabitMainTableViewController.swift */,
-				62FBD01223E5153B0014373A /* NewHabitViewController.swift */,
-				62FBD01823E52BC40014373A /* AlertUIViewController.swift */,
 			);
 			path = HabitClicker;
 			sourceTree = "<group>";
