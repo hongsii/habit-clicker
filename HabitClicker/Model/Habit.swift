@@ -18,8 +18,5 @@ class Habit {
         createdAt = Date()
     }
     
-    static var habits = [
-        Habit(content: "6시 기상"),
-        Habit(content: "8시 출근")
-    ]
+    static var items: [Habit] = []
 }

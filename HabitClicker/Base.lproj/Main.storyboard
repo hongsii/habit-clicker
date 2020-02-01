@@ -42,7 +42,8 @@
                     <navigationItem key="navigationItem" title="습관" largeTitleDisplayMode="always" id="Y5F-nw-6Eu">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xid-X4-KVo">
                             <connections>
-                                <segue destination="fpP-rh-SfY" kind="showDetail" id="EaY-3z-Icg"/>
+                                <action selector="addNewHabit:" destination="bZZ-ps-SmI" id="3eu-ah-zND"/>
+                                <segue destination="fpP-rh-SfY" kind="presentation" id="HgA-bf-dCW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -99,8 +100,16 @@
                                 <action selector="cancel:" destination="lVn-pa-1cX" id="zCy-Xe-EOh"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Vna-AD-7jO"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Vna-AD-7jO">
+                            <connections>
+                                <action selector="save:" destination="lVn-pa-1cX" id="jOv-E3-XIM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ContentTextView" destination="vf9-Qn-vkz" id="HX2-6z-jxF"/>
+                        <outlet property="contentTextView" destination="vf9-Qn-vkz" id="SLn-FI-jRE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxv-Qy-1rU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,7 +118,8 @@
         <!--Navigation Controller-->
         <scene sceneID="q6q-BC-YVX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fpP-rh-SfY" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7mo-T6-WpN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="fpP-rh-SfY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gDF-dC-XpP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -120,7 +130,6 @@
                         <segue destination="lVn-pa-1cX" kind="relationship" relationship="rootViewController" id="n7A-0E-8Aq"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7mo-T6-WpN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1271" y="-700"/>
         </scene>
