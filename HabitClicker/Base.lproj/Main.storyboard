@@ -17,20 +17,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Habit Cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="HabitCell" id="OoG-sd-KXY" userLabel="Habit Cell" customClass="HabitMainTableViewCell" customModule="HabitClicker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="41.333332061767578"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OoG-sd-KXY" id="UVp-6g-4mU">
-                                    <rect key="frame" x="0.0" y="0.0" width="383" height="41.333332061767578"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFB-Of-OVl">
-                                            <rect key="frame" x="20" y="10.333333333333334" width="42" height="20.666666666666664"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFB-Of-OVl">
+                                            <rect key="frame" x="20" y="11.666666666666666" width="42" height="20.333333333333336"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckn-bg-ZeT">
-                                            <rect key="frame" x="346" y="4.9999999999999982" width="32" height="31.333333333333329"/>
+                                            <rect key="frame" x="346" y="6.3333333333333321" width="32" height="30.999999999999996"/>
                                             <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" image="minus.circle.fill" catalog="system">
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="27" scale="default"/>
@@ -40,8 +40,8 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLW-Bi-V0h">
-                                            <rect key="frame" x="309" y="4.9999999999999982" width="32" height="31.333333333333329"/>
-                                            <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <rect key="frame" x="309" y="6.3333333333333321" width="32" height="30.999999999999996"/>
+                                            <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <state key="normal" image="plus.circle.fill" catalog="system">
                                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="27"/>
@@ -51,8 +51,8 @@
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cnt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygr-6i-Lic">
-                                            <rect key="frame" x="279" y="10.333333333333336" width="25" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="281.66666666666669" y="13.333333333333336" width="22.333333333333314" height="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -63,9 +63,7 @@
                                         <constraint firstItem="uLW-Bi-V0h" firstAttribute="centerY" secondItem="UVp-6g-4mU" secondAttribute="centerY" id="ENl-1l-A49"/>
                                         <constraint firstItem="Ygr-6i-Lic" firstAttribute="centerY" secondItem="UVp-6g-4mU" secondAttribute="centerY" id="Fc1-5r-u1u"/>
                                         <constraint firstItem="uLW-Bi-V0h" firstAttribute="leading" secondItem="Ygr-6i-Lic" secondAttribute="trailing" constant="5" id="Gqk-tq-Mha"/>
-                                        <constraint firstItem="uLW-Bi-V0h" firstAttribute="top" secondItem="UVp-6g-4mU" secondAttribute="top" constant="5" id="JDB-pa-b9K"/>
-                                        <constraint firstItem="ckn-bg-ZeT" firstAttribute="top" secondItem="UVp-6g-4mU" secondAttribute="top" constant="5" id="MMo-Q6-KtQ"/>
-                                        <constraint firstAttribute="bottom" secondItem="uLW-Bi-V0h" secondAttribute="bottom" constant="5" id="cwL-MP-Xrq"/>
+                                        <constraint firstItem="Ygr-6i-Lic" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LFB-Of-OVl" secondAttribute="trailing" constant="15" id="L0S-lE-rmn"/>
                                         <constraint firstItem="LFB-Of-OVl" firstAttribute="leading" secondItem="UVp-6g-4mU" secondAttribute="leading" constant="20" id="fR0-42-4Ac"/>
                                         <constraint firstAttribute="trailing" secondItem="ckn-bg-ZeT" secondAttribute="trailing" constant="5" id="fyV-I0-vDJ"/>
                                         <constraint firstItem="LFB-Of-OVl" firstAttribute="centerY" secondItem="UVp-6g-4mU" secondAttribute="centerY" id="lsc-Np-Tae"/>
@@ -122,7 +120,7 @@
         <!--새 습관-->
         <scene sceneID="8fb-OZ-5JI">
             <objects>
-                <viewController id="lVn-pa-1cX" customClass="NewHabitViewController" customModule="HabitClicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lVn-pa-1cX" customClass="HabitSaveViewController" customModule="HabitClicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9S4-86-QQ6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,7 +148,7 @@
                                 <action selector="cancel:" destination="lVn-pa-1cX" id="zCy-Xe-EOh"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="추가" id="Vna-AD-7jO">
+                        <barButtonItem key="rightBarButtonItem" title="저장" id="Vna-AD-7jO">
                             <connections>
                                 <action selector="add:" destination="lVn-pa-1cX" id="95P-hR-u2r"/>
                             </connections>
@@ -209,7 +207,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ax9-VE-8Le">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" layoutMarginsFollowReadableWidth="YES" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ax9-VE-8Le">
                                                     <rect key="frame" x="354.66666666666669" y="13" width="39.333333333333336" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -258,7 +256,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SnB-u1-Jkl"/>
                     </view>
-                    <navigationItem key="navigationItem" id="az2-Hi-MQf"/>
+                    <navigationItem key="navigationItem" id="az2-Hi-MQf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="I66-fA-NjM">
+                            <connections>
+                                <segue destination="fpP-rh-SfY" kind="presentation" id="Bci-5X-NUk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ukp-7C-slT" id="z6B-Vk-Ag1"/>
                     </connections>
@@ -272,4 +276,7 @@
         <image name="minus.circle.fill" catalog="system" width="64" height="60"/>
         <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HgA-bf-dCW"/>
+    </inferredMetricsTieBreakers>
 </document>

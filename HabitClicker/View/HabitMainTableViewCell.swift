@@ -37,12 +37,13 @@ class HabitMainTableViewCell: UITableViewCell {
     
     private func setCountLabel(count: Int16? = 0) {
         guard let count = count else { return }
-        var text = String(count)
+        var text = "  "
         var textColor = UIColor.label
         if (count > Int16(0)) {
-            text = "+\(text)"
-            textColor = UIColor.systemGreen
+            text = "+\(count)"
+            textColor = UIColor.systemBlue
         } else if (count < Int16(0)) {
+            text = "−\(abs(count))"
             textColor = UIColor.systemRed
         }
         countLabel.text = text

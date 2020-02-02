@@ -20,24 +20,31 @@ class HabitDetailViewController: UIViewController {
         return f
     }()
     
+    var observer: NSObjectProtocol?
+
     @IBOutlet weak var tableView: UITableView!
+    
+    deinit {
+        if let observer = observer {
+            NotificationCenter.default.removeObserver(observer)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         tableView.tableFooterView = UIView()
+        
+        observer = NotificationCenter.default.addObserver(forName: HabitSaveViewController.refresh, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.tableView.reloadData() }
     }
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let vc = segue.destination.children.first as? HabitSaveViewController {
+            vc.habitForEdit = habit
+        }
     }
-    */
-
+ 
 }
 
 extension HabitDetailViewController: UITableViewDataSource {
@@ -51,7 +58,7 @@ extension HabitDetailViewController: UITableViewDataSource {
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "detailContentCell", for: indexPath)
-            cell.textLabel?.text = "습관"
+            cell.textLabel?.text = "내용"
             cell.detailTextLabel?.text = habit?.content
             return cell
         case 1:
@@ -63,5 +70,11 @@ extension HabitDetailViewController: UITableViewDataSource {
             fatalError("Not exists row. check table view")
         }
     }
+    
+}
+
+extension HabitDetailViewController {
+    
+    static let refreshDetailView = Notification.Name(rawValue: "refreshDetailView")
     
 }

@@ -9,8 +9,6 @@
 import UIKit
 
 class HabitMainTableViewController: UITableViewController {
-   
-    static let refreshHabits = Notification.Name(rawValue: "refreshHabits")
     
     private var observers = [NSObjectProtocol]()
     
@@ -24,7 +22,7 @@ class HabitMainTableViewController: UITableViewController {
         
         tableView.tableFooterView = UIView()
 
-        let refreshHabitsObserver = NotificationCenter.default.addObserver(forName: HabitMainTableViewController.refreshHabits, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.tableView.reloadData() }
+        let refreshHabitsObserver = NotificationCenter.default.addObserver(forName: HabitSaveViewController.refresh, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.tableView.reloadData() }
         
         observers.append(refreshHabitsObserver)
         
@@ -62,7 +60,7 @@ class HabitMainTableViewController: UITableViewController {
     @IBAction func resetCountOfHabits(_ sender: Any) {
         confirm(title: "확인", message: "기록한 습관을 초기화하시겠습니까?") { action -> Void in
             DataManager.shared.resetCountOfHabits(closedAt: Date().toDate())
-            NotificationCenter.default.post(name: HabitMainTableViewController.refreshHabits, object: nil)
+            NotificationCenter.default.post(name: HabitSaveViewController.refresh, object: nil)
         }
     }
     
