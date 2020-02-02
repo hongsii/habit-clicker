@@ -14,6 +14,7 @@
 		62CE5F2323E6CF1A008971AC /* Habit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE5F1F23E6CF1A008971AC /* Habit+CoreDataProperties.swift */; };
 		62CE5F2423E6CF1A008971AC /* HabitCountHistory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE5F2023E6CF1A008971AC /* HabitCountHistory+CoreDataClass.swift */; };
 		62CE5F2523E6CF1A008971AC /* HabitCountHistory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE5F2123E6CF1A008971AC /* HabitCountHistory+CoreDataProperties.swift */; };
+		62CE5F2923E6D95B008971AC /* HabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE5F2823E6D95B008971AC /* HabitDetailViewController.swift */; };
 		62FBD01123E464FF0014373A /* HabitMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBD01023E464FF0014373A /* HabitMainTableViewController.swift */; };
 		62FBD01323E5153B0014373A /* NewHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBD01223E5153B0014373A /* NewHabitViewController.swift */; };
 		62FBD01923E52BC40014373A /* AlertUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBD01823E52BC40014373A /* AlertUIViewController.swift */; };
@@ -47,6 +48,7 @@
 		62CE5F1F23E6CF1A008971AC /* Habit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habit+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		62CE5F2023E6CF1A008971AC /* HabitCountHistory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HabitCountHistory+CoreDataClass.swift"; sourceTree = "<group>"; };
 		62CE5F2123E6CF1A008971AC /* HabitCountHistory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HabitCountHistory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		62CE5F2823E6D95B008971AC /* HabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailViewController.swift; sourceTree = "<group>"; };
 		62FBD01023E464FF0014373A /* HabitMainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitMainTableViewController.swift; sourceTree = "<group>"; };
 		62FBD01223E5153B0014373A /* NewHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitViewController.swift; sourceTree = "<group>"; };
 		62FBD01823E52BC40014373A /* AlertUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUIViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				62FBD01023E464FF0014373A /* HabitMainTableViewController.swift */,
 				62FBD01223E5153B0014373A /* NewHabitViewController.swift */,
 				62FBD01823E52BC40014373A /* AlertUIViewController.swift */,
+				62CE5F2823E6D95B008971AC /* HabitDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				62FCD74623E455B60036076C /* SceneDelegate.swift in Sources */,
 				62FBD01F23E542000014373A /* DataManager.swift in Sources */,
 				62FBD01123E464FF0014373A /* HabitMainTableViewController.swift in Sources */,
+				62CE5F2923E6D95B008971AC /* HabitDetailViewController.swift in Sources */,
 				62FBD02C23E579860014373A /* HabitMainTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

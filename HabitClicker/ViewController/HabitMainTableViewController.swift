@@ -21,6 +21,8 @@ class HabitMainTableViewController: UITableViewController {
     // 뷰가 생성될 때 초기화 코드 구현
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.tableFooterView = UIView()
 
         let refreshHabitsObserver = NotificationCenter.default.addObserver(forName: HabitMainTableViewController.refreshHabits, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.tableView.reloadData() }
         
@@ -34,6 +36,15 @@ class HabitMainTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? HabitMainTableViewCell, let indexPath =
+            tableView.indexPath(for: cell) {
+            if let vc = segue.destination as? HabitDetailViewController {
+                vc.habit = DataManager.shared.habits[indexPath.row]
+            }
+        }
     }
 
     // MARK: - Table view data source
