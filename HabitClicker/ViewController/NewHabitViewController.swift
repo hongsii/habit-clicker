@@ -21,7 +21,7 @@ class NewHabitViewController: UIViewController {
     @IBAction func add(_ sender: Any) {
         guard let content = self.contentTextView.text,
             !content.isEmpty else {
-                alert(messasge: "내용을 입력하세요.")
+                alert(message: "내용을 입력하세요.")
                 return
         }
         DataManager.shared.addNewHabit(content)
