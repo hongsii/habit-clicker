@@ -31,11 +31,31 @@ class DataManager {
     }
     
     func addNewHabit(_ content: String?) {
-        let newHabit = Habit(context: context)
-        newHabit.content = content
-        newHabit.createdAt = Date()
-        newHabit.order = Int16(habits.count + 1)
-        habits.append(newHabit)
+        save {
+            let newHabit = Habit(context: context)
+            newHabit.content = content
+            newHabit.createdAt = Date()
+            newHabit.order = Int16(habits.count + 1)
+            habits.append(newHabit)
+        }
+    }
+    
+    func resetCountOfHabits(closedAt: Date) {
+        save {
+            habits.forEach { habit in
+                let newHistory = HabitCountHistory(context: context)
+                newHistory.count = habit.count
+                newHistory.closedAt = closedAt.toDate()
+                newHistory.habit = habit
+
+                habit.count = 0
+                habit.addToCountHistories(newHistory)
+            }
+        }
+    }
+    
+    private func save(handler: () -> Void) {
+        handler()
         saveContext()
     }
     

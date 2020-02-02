@@ -84,12 +84,19 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="습관" largeTitleDisplayMode="always" id="Y5F-nw-6Eu">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xid-X4-KVo">
-                            <connections>
-                                <action selector="addNewHabit:" destination="bZZ-ps-SmI" id="3eu-ah-zND"/>
-                                <segue destination="fpP-rh-SfY" kind="presentation" id="HgA-bf-dCW"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="xid-X4-KVo">
+                                <connections>
+                                    <action selector="addNewHabit:" destination="bZZ-ps-SmI" id="3eu-ah-zND"/>
+                                    <segue destination="fpP-rh-SfY" kind="presentation" id="HgA-bf-dCW"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="refresh" id="biG-YK-zY3">
+                                <connections>
+                                    <action selector="resetCountOfHabits:" destination="bZZ-ps-SmI" id="2gO-p6-Hgj"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KgS-9Z-3fJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

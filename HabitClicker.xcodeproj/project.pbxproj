@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		62CE5EFD23E6B59F008971AC /* HabitClickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE5EFC23E6B59F008971AC /* HabitClickerTests.swift */; };
+		62CE5F0623E6BD65008971AC /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE5F0523E6BD65008971AC /* DateExtension.swift */; };
+		62CE5F0823E6BE76008971AC /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE5F0723E6BE76008971AC /* DateExtensionTests.swift */; };
+		62CE5F2223E6CF1A008971AC /* Habit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE5F1E23E6CF1A008971AC /* Habit+CoreDataClass.swift */; };
+		62CE5F2323E6CF1A008971AC /* Habit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE5F1F23E6CF1A008971AC /* Habit+CoreDataProperties.swift */; };
+		62CE5F2423E6CF1A008971AC /* HabitCountHistory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE5F2023E6CF1A008971AC /* HabitCountHistory+CoreDataClass.swift */; };
+		62CE5F2523E6CF1A008971AC /* HabitCountHistory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE5F2123E6CF1A008971AC /* HabitCountHistory+CoreDataProperties.swift */; };
 		62FBD01123E464FF0014373A /* HabitMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBD01023E464FF0014373A /* HabitMainTableViewController.swift */; };
 		62FBD01323E5153B0014373A /* NewHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBD01223E5153B0014373A /* NewHabitViewController.swift */; };
 		62FBD01923E52BC40014373A /* AlertUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBD01823E52BC40014373A /* AlertUIViewController.swift */; };
@@ -35,6 +41,12 @@
 		62CE5EFA23E6B59F008971AC /* HabitClickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabitClickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62CE5EFC23E6B59F008971AC /* HabitClickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitClickerTests.swift; sourceTree = "<group>"; };
 		62CE5EFE23E6B59F008971AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62CE5F0523E6BD65008971AC /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = HabitClicker/Data/DateExtension.swift; sourceTree = SOURCE_ROOT; };
+		62CE5F0723E6BE76008971AC /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
+		62CE5F1E23E6CF1A008971AC /* Habit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habit+CoreDataClass.swift"; sourceTree = "<group>"; };
+		62CE5F1F23E6CF1A008971AC /* Habit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Habit+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		62CE5F2023E6CF1A008971AC /* HabitCountHistory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HabitCountHistory+CoreDataClass.swift"; sourceTree = "<group>"; };
+		62CE5F2123E6CF1A008971AC /* HabitCountHistory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HabitCountHistory+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		62FBD01023E464FF0014373A /* HabitMainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitMainTableViewController.swift; sourceTree = "<group>"; };
 		62FBD01223E5153B0014373A /* NewHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitViewController.swift; sourceTree = "<group>"; };
 		62FBD01823E52BC40014373A /* AlertUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUIViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +83,7 @@
 		62CE5EFB23E6B59F008971AC /* HabitClickerTests */ = {
 			isa = PBXGroup;
 			children = (
+				62CE5F0723E6BE76008971AC /* DateExtensionTests.swift */,
 				62CE5EFC23E6B59F008971AC /* HabitClickerTests.swift */,
 				62CE5EFE23E6B59F008971AC /* Info.plist */,
 			);
@@ -80,6 +93,7 @@
 		62FBD00D23E463610014373A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				62CE5F0523E6BD65008971AC /* DateExtension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -87,6 +101,10 @@
 		62FBD01D23E541EF0014373A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				62CE5F1E23E6CF1A008971AC /* Habit+CoreDataClass.swift */,
+				62CE5F1F23E6CF1A008971AC /* Habit+CoreDataProperties.swift */,
+				62CE5F2023E6CF1A008971AC /* HabitCountHistory+CoreDataClass.swift */,
+				62CE5F2123E6CF1A008971AC /* HabitCountHistory+CoreDataProperties.swift */,
 				62FBD01E23E542000014373A /* DataManager.swift */,
 			);
 			path = Data;
@@ -248,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62CE5EFD23E6B59F008971AC /* HabitClickerTests.swift in Sources */,
+				62CE5F0823E6BE76008971AC /* DateExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +276,13 @@
 			files = (
 				62FBD01323E5153B0014373A /* NewHabitViewController.swift in Sources */,
 				62FCD74423E455B60036076C /* AppDelegate.swift in Sources */,
+				62CE5F2423E6CF1A008971AC /* HabitCountHistory+CoreDataClass.swift in Sources */,
 				62FCD74E23E455B60036076C /* HabitClicker.xcdatamodeld in Sources */,
+				62CE5F2223E6CF1A008971AC /* Habit+CoreDataClass.swift in Sources */,
+				62CE5F2523E6CF1A008971AC /* HabitCountHistory+CoreDataProperties.swift in Sources */,
+				62CE5F2323E6CF1A008971AC /* Habit+CoreDataProperties.swift in Sources */,
 				62FBD01923E52BC40014373A /* AlertUIViewController.swift in Sources */,
+				62CE5F0623E6BD65008971AC /* DateExtension.swift in Sources */,
 				62FCD74623E455B60036076C /* SceneDelegate.swift in Sources */,
 				62FBD01F23E542000014373A /* DataManager.swift in Sources */,
 				62FBD01123E464FF0014373A /* HabitMainTableViewController.swift in Sources */,

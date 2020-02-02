@@ -48,6 +48,13 @@ class HabitMainTableViewController: UITableViewController {
         return cell
     }
     
+    @IBAction func resetCountOfHabits(_ sender: Any) {
+        confirm(title: "확인", message: "기록한 습관을 초기화하시겠습니까?") { action -> Void in
+            DataManager.shared.resetCountOfHabits(closedAt: Date().toDate())
+            NotificationCenter.default.post(name: HabitMainTableViewController.refreshHabits, object: nil)
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

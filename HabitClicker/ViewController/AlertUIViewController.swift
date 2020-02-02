@@ -10,9 +10,21 @@ import UIKit
 
 extension UIViewController {
     func alert(title: String = "알림", message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
-        alert.addAction(okAction)
+        createAlert(title: title, message: message, actions: okAction, handler: nil)
+    }
+    
+    func confirm(title: String = "확인", message: String, handler: ((UIAlertAction) -> Void)?) {
+        let cancelAction = UIAlertAction(title: "아니요", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "네", style: .default, handler: handler)
+        createAlert(title: title, message: message, actions: cancelAction, okAction, handler: handler)
+    }
+    
+    private func createAlert(title: String, message: String, actions: UIAlertAction..., handler: ((UIAlertAction) -> Void)?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        actions.forEach { action in alert.addAction(action) }
         present(alert, animated: true, completion: nil)
     }
+
+
 }
