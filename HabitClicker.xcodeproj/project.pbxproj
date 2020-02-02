@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62CE5EFD23E6B59F008971AC /* HabitClickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62CE5EFC23E6B59F008971AC /* HabitClickerTests.swift */; };
 		62FBD01123E464FF0014373A /* HabitMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBD01023E464FF0014373A /* HabitMainTableViewController.swift */; };
 		62FBD01323E5153B0014373A /* NewHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBD01223E5153B0014373A /* NewHabitViewController.swift */; };
 		62FBD01923E52BC40014373A /* AlertUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBD01823E52BC40014373A /* AlertUIViewController.swift */; };
@@ -20,7 +21,20 @@
 		62FCD75323E455B80036076C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62FCD75123E455B80036076C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		62CE5EFF23E6B59F008971AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62FCD73823E455B60036076C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62FCD73F23E455B60036076C;
+			remoteInfo = HabitClicker;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		62CE5EFA23E6B59F008971AC /* HabitClickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabitClickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62CE5EFC23E6B59F008971AC /* HabitClickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitClickerTests.swift; sourceTree = "<group>"; };
+		62CE5EFE23E6B59F008971AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62FBD01023E464FF0014373A /* HabitMainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitMainTableViewController.swift; sourceTree = "<group>"; };
 		62FBD01223E5153B0014373A /* NewHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitViewController.swift; sourceTree = "<group>"; };
 		62FBD01823E52BC40014373A /* AlertUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUIViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +51,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		62CE5EF723E6B59F008971AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		62FCD73D23E455B60036076C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62CE5EFB23E6B59F008971AC /* HabitClickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				62CE5EFC23E6B59F008971AC /* HabitClickerTests.swift */,
+				62CE5EFE23E6B59F008971AC /* Info.plist */,
+			);
+			path = HabitClickerTests;
+			sourceTree = "<group>";
+		};
 		62FBD00D23E463610014373A /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				62FCD74223E455B60036076C /* HabitClicker */,
+				62CE5EFB23E6B59F008971AC /* HabitClickerTests */,
 				62FCD74123E455B60036076C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				62FCD74023E455B60036076C /* HabitClicker.app */,
+				62CE5EFA23E6B59F008971AC /* HabitClickerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +149,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		62CE5EF923E6B59F008971AC /* HabitClickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62CE5F0323E6B59F008971AC /* Build configuration list for PBXNativeTarget "HabitClickerTests" */;
+			buildPhases = (
+				62CE5EF623E6B59F008971AC /* Sources */,
+				62CE5EF723E6B59F008971AC /* Frameworks */,
+				62CE5EF823E6B59F008971AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62CE5F0023E6B59F008971AC /* PBXTargetDependency */,
+			);
+			name = HabitClickerTests;
+			productName = HabitClickerTests;
+			productReference = 62CE5EFA23E6B59F008971AC /* HabitClickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		62FCD73F23E455B60036076C /* HabitClicker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62FCD75723E455B80036076C /* Build configuration list for PBXNativeTarget "HabitClicker" */;
@@ -144,6 +194,10 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = hongsii;
 				TargetAttributes = {
+					62CE5EF923E6B59F008971AC = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 62FCD73F23E455B60036076C;
+					};
 					62FCD73F23E455B60036076C = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -163,11 +217,19 @@
 			projectRoot = "";
 			targets = (
 				62FCD73F23E455B60036076C /* HabitClicker */,
+				62CE5EF923E6B59F008971AC /* HabitClickerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		62CE5EF823E6B59F008971AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		62FCD73E23E455B60036076C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -181,6 +243,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		62CE5EF623E6B59F008971AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62CE5EFD23E6B59F008971AC /* HabitClickerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		62FCD73C23E455B60036076C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,6 +267,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		62CE5F0023E6B59F008971AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62FCD73F23E455B60036076C /* HabitClicker */;
+			targetProxy = 62CE5EFF23E6B59F008971AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		62FCD74923E455B60036076C /* Main.storyboard */ = {
@@ -218,6 +296,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		62CE5F0123E6B59F008971AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TL43SZTC5J;
+				INFOPLIST_FILE = HabitClickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.hongsii.HabitClickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HabitClicker.app/HabitClicker";
+			};
+			name = Debug;
+		};
+		62CE5F0223E6B59F008971AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TL43SZTC5J;
+				INFOPLIST_FILE = HabitClickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.hongsii.HabitClickerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HabitClicker.app/HabitClicker";
+			};
+			name = Release;
+		};
 		62FCD75523E455B80036076C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -371,6 +489,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		62CE5F0323E6B59F008971AC /* Build configuration list for PBXNativeTarget "HabitClickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62CE5F0123E6B59F008971AC /* Debug */,
+				62CE5F0223E6B59F008971AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		62FCD73B23E455B60036076C /* Build configuration list for PBXProject "HabitClicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
